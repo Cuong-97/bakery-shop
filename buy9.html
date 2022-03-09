@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<va>, initial-scale=1.0">
+    <title>Caffee vibes</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/fontawesome-free-5.15.4-web/css/all.css">
+    <link rel="stylesheet" href="/assets/css/buy1.css">
+
+    <script>
+        function total(){
+            let quantity = document.getElementById("quantity").value;
+            let payment = document.getElementById("payment").value;
+            let total = quantity*760*1.08;
+            if (quantity%1!=0){
+                document.getElementById("total").innerHTML = "<div class="+"font_cart_item2"+">Please enter the quantity of the item !</div>";
+            }else if (quantity<=0){
+                document.getElementById("total").innerHTML = "<div class="+"font_cart_item2"+">Please enter a Quantity greater than 0 !</div>";
+            } else {
+                document.getElementById("total").innerHTML = "<div class="+"font_cart_item2"+">Total = " + total + " ￥ "+" (8% tax included)</div>";
+                document.getElementById("total2").innerHTML = "<div class="+"font_cart_item2"+">Payment methods : "+payment+"</div>";
+                document.getElementById("total3").innerHTML = "<div class="+"font_cart_item2"+">Your order will be delivered in 30 minutes </div>";
+                document.getElementById("confirm").innerHTML = "<a href="+"complete.html"+" "+"class="+"decor"+"><center><b class="+"cart_button"+">Confirm</b></center></a>";
+            }
+        }
+        function time(){
+            let date = new Date();
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
+            let day = date.getDate();
+            let hour = date.getHours();
+            let minute = date.getMinutes();
+            let today = year + "/" + month + "/" + day + " ~ " + hour + "h"+ minute + "m";
+            document.getElementById("time").innerHTML = "<div class="+"font_cart_item2"+">Order time  : " + today +"</div>";
+        }
+
+        function total_mobile(){
+            let quantity = document.getElementById("quantity_mobile").value;
+            let payment = document.getElementById("payment_mobile").value;
+            let total = quantity*760*1.08;
+            if (quantity%1!=0){
+                document.getElementById("total_mobile").innerHTML = "<div class="+"font_cart_item2"+">Please enter the quantity of the item !</div>";
+            }else if (quantity<=0){
+                document.getElementById("total_mobile").innerHTML = "<div class="+"font_cart_item2"+">Please enter a Quantity greater than 0 !</div>";
+            } else {
+                document.getElementById("total_mobile").innerHTML = "<div class="+"font_cart_item2"+">Total = " + total + " ￥ "+" (8% tax included)</div>";
+                document.getElementById("total2_mobile").innerHTML = "<div class="+"font_cart_item2"+">Payment methods : "+payment+"</div>";
+                document.getElementById("total3_mobile").innerHTML = "<div class="+"font_cart_item2"+">Your order will be delivered in 30 minutes </div>";
+                document.getElementById("confirm_mobile").innerHTML = "<a href="+"complete.html"+" "+"class="+"decor"+"><center><b class="+"cart_button"+">Confirm</b></center></a>";
+            }
+        }
+        function time_mobile(){
+            let date = new Date();
+            let year = date.getFullYear();
+            let month = date.getMonth() + 1;
+            let day = date.getDate();
+            let hour = date.getHours();
+            let minute = date.getMinutes();
+            let today = year + "/" + month + "/" + day + " ~ " + hour + "h"+ minute + "m";
+            document.getElementById("time_mobile").innerHTML = "<div class="+"font_cart_item2"+">Order time  : " + today +"</div>";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <ul id="nav">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="#">Shopping</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <div id="slider_buy">
+    </div>
+    <div id="font_cart_super">Online Shopping</div>
+
+    <!-- reponsive cart PC & tablet start-->
+    <div id="cart_container" class="cart_content">
+        <img id="img_buy" src="/assets/img/banh9.jpg" >
+        <h2 class="font_cart_sub" >Your cart</h2>
+
+        <div id="cart_content_sub" class="cart_container_sub">
+            <div id="list_post1">
+                <div id="align_footer">
+                    <p class="font_cart_item">Products</p>
+                    <p class="font_cart_item">Price </p>
+                    <p class="font_cart_item">Quantity</p>
+                    <p class="font_cart_item">Payment methods</p>
+                </div>
+            </div>
+            <div id="list_post2">
+                <div id="align_footer">
+                    <p class="font_cart_item" >Jaggery cake</p>
+                    <p class="font_cart_item">760￥</p>
+                    <input type="text" value="" id="quantity" placeholder="Enter here"/><br>
+                    <select id="payment">
+                        <option value="Credit card">Credit card</option>
+                        <option value="Pay Pay">Pay Pay</option>
+                        <option value="Line Pay">Line Pay</option>
+                        <option value="Apple Pay">Apple Pay</option>
+                        <option value="Visa">Visa</option>
+                    </select>
+                </div>
+            </div>
+            <center><button onclick="total();time()" class="cart_button">Total amount</button></center>
+            <br>
+            <div class="font_cart_item">
+                <p id="total"></p>
+                <p id="total2"></p>
+                <p id="total3"></p>
+                <p id="time"></p>
+            </div>
+            <br>
+            <p id="confirm"></p>
+        </div>
+
+    </div>
+        <!-- reponsive cart PC & tablet end-->
+    
+
+        <!-- reponsive cart mobile start-->
+        <div id="cart_container_mobile" class="cart_content_mobile"> 
+            <p class="name_products_css">Jaggery cake</p>
+            <img id="img_buy" src="/assets/img/banh9.jpg" >
+            <h2 class="font_cart_sub" >Your cart</h2>
+            <div id="cart_content_sub" class="cart_container_sub">
+                <div id="list_post1">
+                    <div id="align_container1">
+                        <p class="font_cart_item">Price </p>
+                        <p class="font_cart_item">Quantity</p>
+                        <p class="font_cart_item">Payment methods</p>
+                    </div>
+                </div>
+                <div id="list_post2">
+                    <div id="align_container2">
+                        <p class="font_cart_item">760￥</p>
+                        <input type="text" value="" id="quantity_mobile" placeholder="Enter here"/><br>
+                        <select id="payment_mobile">
+                            <option value="Credit card">Credit card</option>
+                            <option value="Pay Pay">Pay Pay</option>
+                            <option value="Line Pay">Line Pay</option>
+                            <option value="Apple Pay">Apple Pay</option>
+                            <option value="Visa">Visa</option>
+                        </select>
+                    </div>
+                </div>
+                <center><button onclick="total_mobile();time_mobile()" class="cart_button">Total amount</button></center>
+                <br>
+                <div class="font_cart_item">
+                    <p id="total_mobile"></p>
+                    <p id="total2_mobile"></p>
+                    <p id="total3_mobile"></p>
+                    <p id="time_mobile"></p>
+                </div>
+                <br>
+                <p id="confirm_mobile"></p>
+            </div>
+        </div>
+        <!-- reponsive cart mobile end-->
+
+
+    <footer class="footer">
+        <div id="content" class="container">
+            <div id="post1">
+                <div id="font_footer">CONTACT INFORMATION</div>
+                <div id="align_footer">
+                    <i id="font_footer_icon" class="fas fa-phone-alt"> </i> <a id="font_footer_sub" > TEL : 080-000-000 & 030-000-000</a><br>
+                    <i id="font_footer_icon" class="far fa-envelope"> </i> <a id="font_footer_sub" > MAIL : coffeevibes@bakery.com </a><br>
+                    <i id="font_footer_icon" class="fas fa-map-marker-alt"> </i> <a id="font_footer_sub" > ADD : Saitama, Niiza City, Tohoku</a><br>
+                </div>
+            </div>
+            <div id="post2">
+                <div id="font_footer">FOLLOW US</div>
+                <div id="align_footer">
+                    <i id="font_footer_icon" class="fab fa-facebook"></i> <a id="font_footer_sub" > Facebook : facebook.com/bakery </a><br>
+                    <i id="font_footer_icon" class="fab fa-instagram"></i> <a id="font_footer_sub" > Instagram : instagram.com/bakery </a><br>
+                    <i id="font_footer_icon" class="fab fa-invision"></i> <a id="font_footer_sub" > Invision : invision.com/bakery </a><br>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+</html>

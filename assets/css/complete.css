@@ -1,0 +1,31 @@
+/* slider */
+#slider_complete{
+    padding-top: 50%;
+    background: url('../img/A.png') top center/ cover no-repeat;
+}
+/*  */
+#font_complete_super{
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    padding: 40px 0 20px;
+    font-weight: 600;
+    color: orangered;    
+}
+#font_complete_sub{
+    font-size: 25px;
+    line-height: 36px;
+    text-align: center;
+    padding: 20px 0 20px;
+    font-weight: 600;
+    color: orangered;  
+}
+#font_complete_sub2{
+    font-size: 25px;
+    line-height: 36px;
+    font-weight: 600;
+    color: navy;  
+}
+.decor{
+    text-decoration: none;
+}

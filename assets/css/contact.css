@@ -1,0 +1,65 @@
+
+#slider_contact{
+    padding-top: 50%;
+    background: url('../img/D.png') top center/ cover no-repeat;
+}
+
+#font_contact_super{
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+    padding-top: 60px;
+}
+
+#font_contact_icon{
+    color: blue;
+    font-size: 20px;
+    padding: 0px 10px 0px;
+}
+
+#font_contact_sub{
+    line-height: 36px;
+    font-size: 19px;
+    text-align: center;
+    padding: 20px 0px 32px;
+    font-family: Arial;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* post */
+
+#content_contact{
+    overflow: auto;
+}
+
+.container_contact{
+    width: 70%;
+    margin: 0 auto;
+    padding: 5px 5px 56px;
+}
+
+#post_email{
+    width: 33.333%;
+    float: left;
+    text-align: center;
+    box-shadow: 2px 2px 15px 2px #fcdca9;
+}
+
+#post_phone{
+    width: 33.334%;
+    float: left;
+    text-align: center;
+    box-shadow: 2px 2px 15px 2px #fcdca9;
+}
+
+#post_address{
+    width: 33.333%;
+    float: left;
+    text-align: center;
+    box-shadow: 2px 2px 15px 2px #fcdca9;
+}
+
+#icon_contact{
+    color: black;
+    font-size: 36px;
+    margin-top: 25px;
+}
