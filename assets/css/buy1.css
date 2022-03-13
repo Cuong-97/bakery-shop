@@ -80,6 +80,7 @@
     color: orangered;
     background-color: honeydew;
     text-decoration: none;
+    cursor: pointer;
 }
 .decor{
     text-decoration: none;
